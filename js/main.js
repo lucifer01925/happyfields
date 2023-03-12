@@ -56,15 +56,16 @@
     });
 })();
 
-// handle download files
 const downloadBtn = document.getElementById('btnDownload');
-// console.log('downloadBtn:', downloadBtn);
 
-const fileLink =
-    'https://drive.google.com/uc?export=download&id=1m3Lu5baIAUVg7VuvNWC3JuBl9snOYO4P';
+const fileLink = 'https://github.com/lucifer01925/happyfields/raw/main/application/android/v1.2.0/HappyFields-v1.2.0.apk';
 
-const initTimer = () => {
-    location.href = fileLink;
+const downloadFile = () => {
+  const anchor = document.createElement('a');
+  anchor.setAttribute('href', fileLink);
+  anchor.setAttribute('download', 'HappyFields-v1.2.0.apk');
+  anchor.click();
 };
 
-downloadBtn.addEventListener('click', initTimer);
+downloadBtn.addEventListener('click', downloadFile);
+
